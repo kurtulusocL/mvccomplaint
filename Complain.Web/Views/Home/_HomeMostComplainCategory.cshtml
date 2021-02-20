@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Complain.Entities.Entities.Category>
+@{
+    Layout = null;
+}
+
+@foreach (var item in Model)
+{
+    <div class="col-md-6 col-lg-4">
+        <div class="block-2">
+            <div class="flipper">
+                <div class="front">
+                    <img src="~/img/category/@item.Photo" style="max-height:427px;max-width:345px;min-height:427px;min-width:345px" />
+                    <div class="box">
+                        <h2>@item.Name</h2>
+                        <p>@item.Products.Count() şikayet</p>
+                    </div>
+                </div>
+                <div class="back">
+                    <blockquote>
+                        <p>&ldquo;Bu kategoride @item.OfferCompanies.Count() öneri de bulunmaktadır. &rdquo;</p>
+                    </blockquote>
+                    <div class="author d-flex">
+                        <div class="name align-self-center">@item.Name <span class="position">@item.Products.Count()</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

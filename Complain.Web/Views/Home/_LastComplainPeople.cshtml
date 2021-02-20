@@ -1,0 +1,9 @@
+﻿@model IEnumerable<Complain.Entities.Entities.Product>
+@{
+    Layout = null;
+}
+
+@foreach (var item in Model)
+{
+    <li><a href="">@item.ComplainOwner.NameSurname</a></li>
+}

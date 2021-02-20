@@ -1,0 +1,10 @@
+﻿@model IEnumerable<Complain.Entities.Entities.ProductDetail>
+@{
+    Layout = null;
+}
+
+@foreach (var item in Model)
+{
+    <li><a href="">@item.Brand <span>@item.Products.Count()</span></a></li>
+}
+

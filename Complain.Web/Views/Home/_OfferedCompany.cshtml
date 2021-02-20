@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Complain.Entities.Entities.OfferCompany>
+@{
+    Layout = null;
+}
+
+@foreach (var item in Model)
+{
+    <div class="col-md-6 col-lg-3">
+        <div class="media block-6 d-block">
+            <div class="icon mb-3"><span class="flaticon-book"></span></div>
+            <div class="media-body">
+                <h3 class="heading">@item.CompanyName</h3>
+                <p>@Html.Raw(HttpUtility.HtmlDecode(Complain.Web.Toolkits.More.SafeSubstring(item.Description, 65)))</p>
+                <p><a href="~/OfferCompany/Detail/@item.Id" class="more">Devamını Okuyun <span class="ion-arrow-right-c"></span></a></p>
+            </div>
+        </div>
+    </div>
+}

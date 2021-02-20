@@ -1,0 +1,107 @@
+﻿@model Complain.Entities.Entities.OfferCompany
+@{
+    ViewBag.Title = "Yeni Ürün ya da Firma Öner";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<section id="container" class="">
+    <section id="main-content">
+        <section class="wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            @ViewBag.Title
+                        </header>
+                        <div class="panel-body">
+                            <div class="form">
+                                <form class="cmxform form-horizontal tasi-form" id="signupForm" method="post" enctype="multipart/form-data" action="">
+                                    @Html.AntiForgeryToken()
+                                    <hr />
+                                    <h3><label class="label label-info">Kategori ve Ülke Seçimi</label></h3>
+                                    <hr />
+                                    <div class="form-group ">
+                                        <label for="firstname" class="control-label col-lg-2">Öneri Kategorisi: *</label>
+                                        <div class="col-lg-10">
+                                            @Html.LabelFor(i => i.Category.Name, new { @class = "label-control col-md-3" })
+                                            @Html.DropDownListFor(i => i.CategoryId, new SelectList(ViewBag.Categories, "Id", "Name", new { @class = "form-control" }))
+                                            @Html.ValidationMessageFor(i => i.CategoryId, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="firstname" class="control-label col-lg-2">Öneri Yapılan Ülke: *</label>
+                                        <div class="col-lg-10">
+                                            @Html.LabelFor(i => i.Country.Name, new { @class = "label-control col-md-3" })
+                                            @Html.DropDownListFor(i => i.CountryId, new SelectList(ViewBag.Countries, "Id", "Name", new { @class = "form-control" }))
+                                            @Html.ValidationMessageFor(i => i.CountryId, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <hr />
+                                    <h3><label class="label label-info">Öneri Bilgileri</label></h3>
+                                    <hr />
+                                    <div class="form-group ">
+                                        <label for="firstname" class="control-label col-lg-2">Firma Adı: *</label>
+                                        <div class="col-lg-10">
+                                            <input class=" form-control" id="firstname" name="CompanyName" type="text" required />
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="ccomment" class="control-label col-lg-2">Neden?: *</label>
+                                        <div class="col-lg-10">
+                                            <textarea class="form-control " id="ccomment" name="Subject" required=""></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="ccomment" class="control-label col-lg-2">Firma Açıklaması: *</label>
+                                        <div class="col-lg-10">
+                                            <textarea class="form-control " id="ccomment" name="Description" required=""></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="username" class="control-label col-lg-2">Resim Yükleyin: *</label>
+                                        <div class="col-lg-10">
+                                            <input class="form-control " id="username" name="image" type="file" required />
+                                        </div>
+                                    </div>
+                                    <hr />
+                                    <h3><label class="label label-info">Kişisel Bilgileriniz</label></h3>
+                                    <hr />
+                                    <div class="form-group ">
+                                        <label for="password" class="control-label col-lg-2">Adınız-Soyadınız: </label>
+                                        <div class="col-lg-10">
+                                            <input class="form-control " id="password" name="OfferOwner.NameSurname" type="text" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="password" class="control-label col-lg-2">Nick Kullanabilirsiniz: *</label>
+                                        <div class="col-lg-10">
+                                            <input class="form-control " id="password" name="OfferOwner.NickName" type="text" required />
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="password" class="control-label col-lg-2">Mail Adresiniz: *</label>
+                                        <div class="col-lg-10">
+                                            <input class="form-control " id="password" name="OfferOwner.MailAddress" type="email" required />
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="password" class="control-label col-lg-2">Kaç Defa Gittiniz: *</label>
+                                        <div class="col-lg-10">
+                                            <input class="form-control " id="password" name="OfferOwner.GoTime" type="text" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-lg-offset-2 col-lg-10">
+                                            <button class="btn btn-success" type="submit">Firma Bilgilerini Ekle</button>
+                                            <a href="~/AdminCreate/OfferList"><button class="btn btn-danger" type="button">İptal Et</button></a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </section>
+</section>

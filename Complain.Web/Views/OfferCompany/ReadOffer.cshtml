@@ -1,0 +1,65 @@
+﻿@using PagedList
+@using PagedList.Mvc
+@model IPagedList<Complain.Entities.Entities.OfferCompany>
+@{
+    ViewBag.Title = "Önerileri Okuyun";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="site-hero site-sm-hero overlay" data-stellar-background-ratio="0.5">
+    <img src="~/img/comp.jpg" style="max-height:550px;max-width:720px;min-height:550px;min-width:720px" />
+</section>
+<div class="site-section bg-light element-animate">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-8 order-md-2 mb-5">
+                <section class="episodes">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 mb-2">
+                                <h2>@ViewBag.Title</h2>
+                            </div>
+                        </div>
+                        @foreach (var item in Model)
+                        {
+                            <div class="row bg-light align-items-center p-4 episode">
+                                <div class="col-md-10">
+                                    <p class="meta">Kategori: <a href="~/Category/ComplainCategory/@item.CategoryId">@item.Category.Name</a> Ülke: <a href="~/Country/ComplainCountry/@item.CountryId">@item.Country.Name</a></p>
+                                    <h2>Firma Adı: <a href="~/OfferComplain/Detail/@item.Id">@item.CompanyName</a></h2>
+                                    <p>@item.Description</p>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-6 col-lg-4 order-md-1">
+                <div class="block-24 mb-5">
+                    <h3 class="heading">Öneri Kategorileri</h3>
+                    <ul>
+                        @Html.Action("GetOfferCategory", "Home")
+                    </ul>
+                </div>
+                <div class="block-25 mb-5">
+                    <div class="heading">Biraz Reklam</div>
+                    <ul>
+                        @Html.Action("AdsForOffer", "Home")
+                    </ul>
+                </div>
+                <div class="block-26">
+                    <h3 class="heading">En Son Öneride Bulunanlar</h3>
+                    <ul>
+                        @Html.Action("LastOfferedPeople", "Home")
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-md-12 text-center">
+                <div class="block-27">
+                    @Html.PagedListPager(Model, Page => Url.Action("ReadOffer", new { Page }), PagedListRenderOptions.ClassicPlusFirstAndLast)
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

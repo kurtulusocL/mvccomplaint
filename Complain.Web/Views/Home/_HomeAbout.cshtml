@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Complain.Entities.Entities.About>
+@{
+    Layout = null;
+}
+
+@foreach (var item in Model)
+{
+    <div class="row align-items-center">
+        <div class="col-md-6 order-md-2">
+            <div class="block-16">
+                <figure>
+                    <img src="~/img/@item.Photo" style="max-height:220px;max-width:330px;min-height:220px;min-width:330px" alt="@item.Title" class="img-fluid">
+                </figure>
+            </div>
+        </div>
+        <div class="col-md-6 order-md-1">
+            <div class="block-15">
+                <div class="heading">
+                    <h2>@item.Title</h2>
+                </div>
+                <div class="text mb-5">
+                    <p>@item.Subtitle</p>
+                </div>
+                <p><a href="~/About/Index" class="btn btn-primary reverse py-2 px-4">Devamını Okuyun</a></p>
+            </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,43 @@
+﻿@model Complain.Entities.Entities.Picture
+@{
+    ViewBag.Title = "Eklediğiniz Resimleri Güncelleyin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="site-hero site-sm-hero overlay" data-stellar-background-ratio="0.5" >
+    <img src="~/img/comp.jpg" style="max-height:550px;max-width:720px;min-height:550px;min-width:720px" />
+</section>
+<div class="site-section bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-8 order-md-2 pl-lg-5">
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 mb-5">
+                        <div class="pt-5">
+                            <div class="comment-form-wrap pt-5">
+                                <h3 class="mb-5">@ViewBag.Title</h3>
+                                <p>* ile gösterilen alanlar zorunludur ve doldurulmadan form gönderme işlemi başarılı olmaz. 3 tane resim ekleyebilirsiniz</p>
+                                <form action="" method="post" enctype="multipart/form-data" class="bg-light">
+                                    @Html.AntiForgeryToken()
+                                    <hr />
+                                    <div class="form-group">
+                                        <label for="text">Şikayet Başlığı *</label>
+                                        <input type="text" name="Name" class="form-control" id="text" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="file">Resim *</label><br />
+                                        <input type="file" name="image" multiple="true" class="form-control" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="submit" value="Değişiklikleri Kaydet ve Yayınla" class="btn btn-primary">
+                                        <a href="~/Product/Index" class="btn btn-default">İptal Et</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

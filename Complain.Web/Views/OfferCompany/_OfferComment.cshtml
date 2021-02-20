@@ -1,0 +1,31 @@
+﻿@model Complain.Entities.Entities.Comment
+@{
+    Layout = null;
+}
+
+@using (Html.BeginForm("_OfferComment", "OfferCompany", FormMethod.Post))
+{
+    <form action="" method="post" class="bg-light">
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+            <label for="name">Adınız Soyadınız *</label>
+            <input type="text" name="NameSurname" placeholder="en az 8 karakter" class="form-control" id="name">
+        </div>
+        <div class="form-group">
+            <label for="email">Mail Adresiniz *</label>
+            <input type="email" name="MailAddress" placeholder="geçerli bir mail adres" class="form-control" id="email">
+        </div>
+        <div class="form-group">
+            <label for="website">Yorum Konusu</label>
+            <input type="text" name="Subject" placeholder="en az 20 karakter" class="form-control" id="website">
+        </div>
+        <div class="form-group">
+            <label for="message">Yorumunuz</label>
+            <textarea name="Text" id="message" placeholder="en az 50 karakter" cols="30" rows="10" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Yorum Yap" class="btn btn-primary">
+        </div>
+    </form>
+}

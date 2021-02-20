@@ -1,0 +1,11 @@
+﻿@model IEnumerable<Complain.Entities.Entities.Picture>
+@{
+    Layout = null;
+}
+
+@foreach (var item in Model)
+{
+    <figure>
+        <img src="~/img/foto/@item.ImageUrl" style="max-height:220px;max-width:363px;min-height:220px;min-width:363px" alt="@item.Product.CompanyName" class="img-fluid">
+    </figure>
+}

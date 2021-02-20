@@ -1,0 +1,37 @@
+﻿@model Complain.Entities.Entities.Ads
+@{
+    ViewBag.Title = "Reklam Detay Bilgileri";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<section id="container" class="">
+    <section id="main-content">
+        <section class="wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            @ViewBag.Title  || <a href="~/Ads/yonas" class="btn btn-primary">Reklam Admin Sayfasına Dön</a> || <a href="~/Ads/Delete/@Model.Id" class="btn btn-danger">Reklamı Sil</a>
+                        </header>
+                        <table class="table table-striped table-advance table-hover">
+                            <thead>
+                                <tr>
+                                    <th><i class="icon-bullhorn"></i>Başlık</th>
+                                    <th class="hidden-phone"><i class="icon-question-sign"></i>İnternet Sitesi</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>@Model.Title</td>
+                                    <td>@Model.WebSite</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </section>
+</section>
+

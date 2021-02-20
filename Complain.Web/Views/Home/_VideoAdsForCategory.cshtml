@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Complain.Entities.Entities.VideoAds>
+@{
+    Layout = null;
+}
+
+@foreach (var item in Model)
+{
+    <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0 pr-md-5">
+            <h2 class="heading"><a href="@item.WebSite">@item.CompanyName</a></h2>
+            <p>@item.Title</p>
+        </div>
+        <div class="col-md-6">
+            <iframe src="@item.VideoLink" style="max-height:140px;max-width:360px;min-height:140px;min-width:360px" frameborder="0" allowtransparency="false"></iframe>
+        </div>
+    </div>
+}

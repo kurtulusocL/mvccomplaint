@@ -1,0 +1,95 @@
+﻿@model Complain.Entities.Entities.Career
+@{
+    Layout = null;
+}
+
+@using (Html.BeginForm("_Create", "Career", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <form action="#" method="post" enctype="multipart/form-data" class="bg-light">
+        @Html.AntiForgeryToken()
+        <hr />
+        <h4><label class="label label-info">Kişsel Bilgileriniz</label></h4>
+        <hr />
+        <div class="form-group">
+            <label for="text">Kimlik Numaranız </label>
+            <input type="text" name="IdentityNo" class="form-control" id="name">
+        </div>
+        <div class="form-group">
+            <label for="text">Pasaport Numaranız </label>
+            <input type="text" name="PassportNo" class="form-control" id="email">
+        </div>
+        <div class="form-group">
+            <label for="text">Adınız-Soyadınız *</label>
+            <input type="text" name="NameSurname" class="form-control" id="website" required>
+        </div>
+        <div class="form-group">
+            <label for="date">Doğum Tarihiniz *</label>
+            <input type="date" name="Birthdate" class="form-control" id="name" required>
+        </div>
+        <div class="form-group">
+            <label for="text">Uyruğunuz *</label>
+            <input type="text" name="Nationality" class="form-control" id="email" required>
+        </div>
+        <div class="form-group">
+            <label for="text">Cinsiyetiniz</label>
+            <input type="text" name="Gender" class="form-control" id="website">
+        </div>
+        <hr />
+        <h4><label class="label label-info">Eğitim Bilgileriniz</label></h4>
+        <hr />
+        <div class="form-group">
+            <label for="text">Üniversite Adı *</label>
+            <input type="text" name="UniversityName" class="form-control" id="name" required>
+        </div>
+        <div class="form-group">
+            <label for="text">Bölüm Adı *</label>
+            <input type="text" name="DepartmanName" class="form-control" id="email" required>
+        </div>
+        <div class="form-group">
+            <label for="text">Bilinen Yabancı Diller *</label>
+            <input type="text" name="KnowingLenguage" class="form-control" id="email" required>
+        </div>
+        <hr />
+        <h4><label class="label label-info">İletişim Bilgileriniz</label></h4>
+        <hr />
+        <div class="form-group">
+            <label for="email">Mail Adresiniz *</label>
+            <input type="email" name="MailAddress" class="form-control" id="email" required>
+        </div>
+        <div class="form-group">
+            <label for="text">Telefon Numaranız *</label>
+            <input type="text" name="PhoneNumber" class="form-control" id="email" required>
+        </div>
+        <div class="form-group">
+            <label for="website">LinkedIn</label>
+            <input type="url" name="LinkedIn" class="form-control" id="website">
+        </div>
+        <hr />
+        <h4><label class="label label-info">İkametgah Bilgileriniz</label></h4>
+        <hr />
+        <div class="form-group">
+            <label for="text">Yaşadığınız Eyalet/Bölge *</label>
+            <input type="text" name="Province" class="form-control" id="text" required>
+        </div>
+        <div class="form-group">
+            <label for="text">Yaşadığınız Şehir *</label>
+            <input type="text" name="City" class="form-control" id="text" required>
+        </div>
+        <div class="form-group">
+            <label for="text">Yaşadığınız Ülke *</label>
+            <input type="text" name="Country" class="form-control" id="text" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Neden Biz? Neden Siz? *</label>
+            <textarea name="ShortIntroduction" id="message" cols="30" rows="10" class="form-control" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="file">Özgeçmişinizi Yükleyin *</label><br />
+            <input type="file" name="resume" class="btn btn-danger" id="website" required>
+        </div><br />
+              <div class="form-group">
+                  <input type="submit" value="Başvuruyu Gönder" class="btn btn-primary">
+                 <a href="~/Home/Index" class="btn btn-default">Vazgeç</a>
+              </div>
+    </form>
+}

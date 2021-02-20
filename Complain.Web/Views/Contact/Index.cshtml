@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Complain.Entities.Entities.Contact>
+@{
+    ViewBag.Title = "Bizimle İletişime Geçin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="site-hero site-sm-hero overlay" data-stellar-background-ratio="0.5">
+    <img src="~/img/comp.jpg" style="max-height:550px;max-width:720px;min-height:550px;min-width:720px" />
+</section>
+<section class="site-section element-animate">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 pr-md-5">
+                @Html.Action("_CreateContact","Contact")
+            </div>
+            <div class="col-md-4">
+                <div class="block-23">
+                    <h3 class="heading mb-5">İşte Buradayız</h3>
+                    <ul>
+                        <li><span class="icon ion-android-pin"></span><span class="text">Ankara, Turkey -  Santo Domingo, Dominican Republic</span></li>
+                        <li><a href="#"><span class="icon ion-android-mail"></span><span class="text">tellme@gmail.com</span></a></li>
+                        <li><span class="icon ion-android-time"></span><span class="text">Everyday &mdash; Everytime 00:00am - 12:00pm</span></li>
+                    </ul>
+                </div>
+            </div>            
+        </div>
+    </div>
+</section>

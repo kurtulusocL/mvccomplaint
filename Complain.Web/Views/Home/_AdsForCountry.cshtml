@@ -1,0 +1,20 @@
+﻿@model IEnumerable<Complain.Entities.Entities.Ads>
+@{
+    Layout = null;
+}
+
+@foreach (var item in Model)
+{
+    <li>
+        <a href="@item.WebSite" class="d-flex">
+            <figure class="image mr-3">
+                <img src="~/img/@item.Photo" style="max-height:62px;max-width:70px;min-height:62px;min-width:70px" alt="@item.CompanyName" class="img-fluid">
+            </figure>
+            <div class="text">
+                <h3 class="heading">@item.Title</h3>
+                <span class="meta">@item.CompanyName</span>
+            </div>
+        </a>
+    </li>
+}
+

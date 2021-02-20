@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Complain.Entities.Entities.Comment>
+@{
+    Layout = null;
+}
+
+@foreach (var item in Model)
+    {
+        <li class="comment">
+            <div class="vcard bio">
+                <img src="~/Content/web/images/person_1.jpg" alt="Image placeholder">
+            </div>
+            <div class="comment-body">
+                <h3>@item.NameSurname</h3>
+                <div class="meta">@item.CreatedTime.ToShortDateString()</div>
+                <p>@item.Text</p>
+                <p></p>
+            </div>
+        </li>
+    }

@@ -1,0 +1,36 @@
+C:\Users\kurtulusocL\Documents\Visual Studio 2017\Project\MyProject\Complain\Complain.Entities\bin\Debug\Complain.Entities.dll.config
+C:\Users\kurtulusocL\Documents\Visual Studio 2017\Project\MyProject\Complain\Complain.Entities\bin\Debug\Complain.Entities.dll
+C:\Users\kurtulusocL\Documents\Visual Studio 2017\Project\MyProject\Complain\Complain.Entities\bin\Debug\Complain.Entities.pdb
+C:\Users\kurtulusocL\Documents\Visual Studio 2017\Project\MyProject\Complain\Complain.Entities\bin\Debug\EntityFramework.dll
+C:\Users\kurtulusocL\Documents\Visual Studio 2017\Project\MyProject\Complain\Complain.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\kurtulusocL\Documents\Visual Studio 2017\Project\MyProject\Complain\Complain.Entities\bin\Debug\EntityFramework.xml
+C:\Users\kurtulusocL\Documents\Visual Studio 2017\Project\MyProject\Complain\Complain.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\kurtulusocL\Documents\Visual Studio 2017\Project\MyProject\Complain\Complain.Entities\obj\Debug\Complain.Entities.csprojAssemblyReference.cache
+C:\Users\kurtulusocL\Documents\Visual Studio 2017\Project\MyProject\Complain\Complain.Entities\obj\Debug\Complain.Entities.csproj.CoreCompileInputs.cache
+C:\Users\kurtulusocL\Documents\Visual Studio 2017\Project\MyProject\Complain\Complain.Entities\obj\Debug\Complain.Entities.csproj.CopyComplete
+C:\Users\kurtulusocL\Documents\Visual Studio 2017\Project\MyProject\Complain\Complain.Entities\obj\Debug\Complain.Entities.dll
+C:\Users\kurtulusocL\Documents\Visual Studio 2017\Project\MyProject\Complain\Complain.Entities\obj\Debug\Complain.Entities.pdb
+C:\Users\kurtulusocL\Documents\Visual Studio 2017\Project\MyProject\#Finishing\Complain\Complain.Entities\bin\Debug\Complain.Entities.dll.config
+C:\Users\kurtulusocL\Documents\Visual Studio 2017\Project\MyProject\#Finishing\Complain\Complain.Entities\bin\Debug\Complain.Entities.dll
+C:\Users\kurtulusocL\Documents\Visual Studio 2017\Project\MyProject\#Finishing\Complain\Complain.Entities\bin\Debug\Complain.Entities.pdb
+C:\Users\kurtulusocL\Documents\Visual Studio 2017\Project\MyProject\#Finishing\Complain\Complain.Entities\bin\Debug\EntityFramework.dll
+C:\Users\kurtulusocL\Documents\Visual Studio 2017\Project\MyProject\#Finishing\Complain\Complain.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\kurtulusocL\Documents\Visual Studio 2017\Project\MyProject\#Finishing\Complain\Complain.Entities\bin\Debug\EntityFramework.xml
+C:\Users\kurtulusocL\Documents\Visual Studio 2017\Project\MyProject\#Finishing\Complain\Complain.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\kurtulusocL\Documents\Visual Studio 2017\Project\MyProject\#Finishing\Complain\Complain.Entities\obj\Debug\Complain.Entities.csprojAssemblyReference.cache
+C:\Users\kurtulusocL\Documents\Visual Studio 2017\Project\MyProject\#Finishing\Complain\Complain.Entities\obj\Debug\Complain.Entities.csproj.CoreCompileInputs.cache
+C:\Users\kurtulusocL\Documents\Visual Studio 2017\Project\MyProject\#Finishing\Complain\Complain.Entities\obj\Debug\Complain.Entities.csproj.CopyComplete
+C:\Users\kurtulusocL\Documents\Visual Studio 2017\Project\MyProject\#Finishing\Complain\Complain.Entities\obj\Debug\Complain.Entities.dll
+C:\Users\kurtulusocL\Documents\Visual Studio 2017\Project\MyProject\#Finishing\Complain\Complain.Entities\obj\Debug\Complain.Entities.pdb
+C:\Users\kurtulusocL\Documents\codeProject\Mvc\#Finished\WebSites\Complain\Complain.Entities\bin\Debug\Complain.Entities.dll.config
+C:\Users\kurtulusocL\Documents\codeProject\Mvc\#Finished\WebSites\Complain\Complain.Entities\bin\Debug\Complain.Entities.dll
+C:\Users\kurtulusocL\Documents\codeProject\Mvc\#Finished\WebSites\Complain\Complain.Entities\bin\Debug\Complain.Entities.pdb
+C:\Users\kurtulusocL\Documents\codeProject\Mvc\#Finished\WebSites\Complain\Complain.Entities\bin\Debug\EntityFramework.dll
+C:\Users\kurtulusocL\Documents\codeProject\Mvc\#Finished\WebSites\Complain\Complain.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\kurtulusocL\Documents\codeProject\Mvc\#Finished\WebSites\Complain\Complain.Entities\bin\Debug\EntityFramework.xml
+C:\Users\kurtulusocL\Documents\codeProject\Mvc\#Finished\WebSites\Complain\Complain.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\kurtulusocL\Documents\codeProject\Mvc\#Finished\WebSites\Complain\Complain.Entities\obj\Debug\Complain.Entities.csprojAssemblyReference.cache
+C:\Users\kurtulusocL\Documents\codeProject\Mvc\#Finished\WebSites\Complain\Complain.Entities\obj\Debug\Complain.Entities.csproj.CoreCompileInputs.cache
+C:\Users\kurtulusocL\Documents\codeProject\Mvc\#Finished\WebSites\Complain\Complain.Entities\obj\Debug\Complain.Entities.csproj.CopyComplete
+C:\Users\kurtulusocL\Documents\codeProject\Mvc\#Finished\WebSites\Complain\Complain.Entities\obj\Debug\Complain.Entities.dll
+C:\Users\kurtulusocL\Documents\codeProject\Mvc\#Finished\WebSites\Complain\Complain.Entities\obj\Debug\Complain.Entities.pdb

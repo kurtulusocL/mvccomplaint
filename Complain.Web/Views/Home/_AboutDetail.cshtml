@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Complain.Entities.Entities.About>
+@{
+    Layout = null;
+}
+
+@foreach (var item in Model)
+{
+    <div class="d-md-flex pt-5">        
+        <div class="text">
+            <p>@item.Subdetail</p>
+            <p>@item.Detail</p>
+            <p>@item.Text</p>
+        </div>
+    </div>
+}

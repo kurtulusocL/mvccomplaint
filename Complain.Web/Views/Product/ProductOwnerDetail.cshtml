@@ -1,0 +1,42 @@
+﻿@model Complain.Entities.Entities.Product
+@{
+    ViewBag.Title = "Şikayet Edenin Bilgileri";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<section id="container" class="">
+    <section id="main-content">
+        <section class="wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            @ViewBag.Title  || <a href="~/Product/yonas" class="btn btn-primary">Admin Şikayet Sayfasına Dön</a> || <a href="~/Product/DeleteOwner/@Model.Id" class="btn btn-danger">Şikayet Sahibi Bilgilerini Sil</a>
+                        </header>
+                        <table class="table table-striped table-advance table-hover">
+                            <thead>
+                                <tr>
+                                    <th><i class="icon-bullhorn"></i>Adı-Soyadı</th>
+                                    <th><i class="icon-bullhorn"></i>Mail Adresi</th>
+                                    <th><i class="icon-bullhorn"></i>Eyalet / Bölge</th>
+                                    <th><i class="icon-bullhorn"></i>Telefon Numaras</th>
+                                    <th class="hidden-phone">Doğrum Tarihi | Cinsiyeti</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>@Model.ComplainOwner.NameSurname</td>
+                                    <td>@Model.ComplainOwner.MailAddress</td>
+                                    <td>@Model.ComplainOwner.Province</td>
+                                    <td>@Model.ComplainOwner.PhoneNumber</td>
+                                    <td>@Model.ComplainOwner.Birthdate.ToShortDateString() | @Model.ComplainOwner.Gender</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </section>
+</section>

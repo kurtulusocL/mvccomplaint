@@ -1,0 +1,114 @@
+﻿@{
+    ViewBag.Title = "Anasayfa";
+}
+
+<section class="site-hero overlay" data-stellar-background-ratio="0.5">
+    <img src="~/img/comp.jpg" style="max-height:550px;max-width:720px;min-height:550px;min-width:720px" />
+</section>
+<section class="site-section element-animate">
+    <div class="container">
+        @Html.Action("HomeAbout", "Home")
+    </div>
+</section>
+<section class="site-section bg-light element-animate" id="section-counter">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <figure>
+                    <img src="~/img/istatistik.jpg" style="max-height:680px;max-width:610px;min-height:680px;min-width:610px" alt="istatistic" class="img-fluid">
+                </figure>
+            </div>
+            <div class="col-lg-5 ml-auto">
+                <div class="block-15">
+                    <div class="heading">
+                        <h2>İstatistikler</h2>
+                    </div>
+                    <div class="text mb-5">
+                        <p>Sizler tarafından önerilen ya da şikayet edilen en fazla 2 firma, ülke ve ürün kategorisi</p>
+                    </div>
+                </div>
+                <div class="row">
+                    @Html.Action("HomeComplainIstatistic", "Home")
+                    @Html.Action("HomeOfferIstatistic", "Home")
+                    @Html.Action("HomeCountryOfferIstatistic", "Home")
+                    @Html.Action("HomeCountryComplainIstatistic", "Home")
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="site-section bg-light">
+    <div class="container">
+        <div class="row justify-content-center mb-5 element-animate">
+            <div class="col-md-7 text-center section-heading">
+                <h2 class="text-primary heading">Son Yapılan Şikayetler</h2>
+                <p>Sizlerden gelen son şikayetler</p>
+                <p><a href="~/Product/Index" class="btn btn-primary py-2 px-4"><span class="ion-ios-book mr-2"></span>Tamamına Bak</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid block-11 element-animate">
+        <div class="nonloop-block-11 owl-carousel">
+            @Html.Action("HomeLastComplain", "Home")
+        </div>
+    </div>
+</div>
+<div class="site-section bg-light">
+    <div class="container">
+        <div class="row justify-content-center mb-5 element-animate">
+            <div class="col-md-7 text-center section-heading">
+                <h2 class="text-primary heading">Öneriler</h2>
+                <p>Sizlerden gelen Son Öneriler</p>
+                <p><a href="~/OfferCompany/Index" class="btn btn-primary py-2 px-4"><span class="ion-ios-book mr-2"></span>Tüm Önerilere Bak</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid block-11 element-animate">
+        <div class="nonloop-block-11 owl-carousel">
+            @Html.Action("HomeLastOffer", "Home")
+        </div>
+    </div>
+</div>
+<div class="container site-section element-animate">
+    <div class="row justify-content-center mb-5">
+        <div class="col-md-7 text-center section-heading">
+            <h2 class="text-primary heading">Öneri Kategorileri</h2>
+            <p>En Fazla Öneri Alan Kategoriler</p>
+        </div>
+    </div>
+    <div class="row">
+        @Html.Action("HomeMostOfferCategory", "Home")
+    </div>
+</div>
+<div class="container site-section element-animate">
+    <div class="row justify-content-center mb-5">
+        <div class="col-md-7 text-center section-heading">
+            <h2 class="text-primary heading">Şİkayet Kategorileri</h2>
+            <p>En Fazla Şİkayet Alan Kategoriler</p>
+        </div>
+    </div>
+    <div class="row">
+        @Html.Action("HomeMostComplainCategory", "Home")
+    </div>
+</div>
+<div class="site-section bg-light">
+    <div class="container">
+        <div class="row justify-content-center mb-5 element-animate">
+            <div class="col-md-7 text-center section-heading">
+                <h2 class="text-primary heading">Biraz Reklam</h2>
+                <p></p>
+            </div>
+        </div>
+        <div class="row element-animate">
+            <div class="col-md-12 mb-5 mb-lg-0 col-lg-6">
+                @Html.Action("HomeVideoAdsTwo", "Home")
+            </div>
+            <div class="col-md-12 col-lg-6">
+                @Html.Action("HomeAds", "Home")
+            </div>
+        </div>
+    </div>
+</div>
+<div class="py-5 block-22">
+
+</div>

@@ -1,0 +1,9 @@
+﻿@model IEnumerable<Complain.Entities.Entities.Country>
+@{
+    Layout = null;
+}
+
+@foreach (var item in Model)
+{
+    <li><a href="~/Country/ComplainCountry/@item.Id">@item.Name <span>@item.Products.Count() öneri</span></a></li>
+}

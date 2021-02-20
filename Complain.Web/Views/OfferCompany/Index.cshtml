@@ -1,0 +1,70 @@
+﻿@using PagedList
+@using PagedList.Mvc
+@model IPagedList<Complain.Entities.Entities.OfferCompany>
+@{
+    ViewBag.Title = "Önerilen Firmalar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="site-hero site-sm-hero overlay" data-stellar-background-ratio="0.5">
+    <img src="~/img/comp.jpg" style="max-height:550px;max-width:720px;min-height:550px;min-width:720px" />
+</section>
+<div class="site-section bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-8 order-md-2">
+                <div class="row">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-md-12 col-lg-6 mb-5">
+                            <div class="block-20 ">
+                                <figure>
+                                    <a href="~/OfferCompany/Detail/@item.Id"><img src="~/img/offer/@item.Photo" alt="" class="img-fluid"></a>
+                                </figure>
+                                <div class="text">
+                                    <h3 class="heading"><a href="~/OfferCompany/Detail/@item.Id">@item.CompanyName</a></h3>
+                                    <div class="meta">
+                                        <div><a href=""><span class="ion-android-calendar"></span>@item.CreatedTime.ToShortDateString()</a></div>
+                                        <div><a href=""><span class="ion-android-person"></span> @item.OfferOwner.NameSurname</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="row mb-5">
+                    <div class="col-md-12 text-center">
+                        <div class="block-27">
+                            @Html.PagedListPager(Model, Page => Url.Action("Index", new { Page }), PagedListRenderOptions.ClassicPlusFirstAndLast)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 order-md-1">
+                <div class="block-24 mb-5">
+                    <h3 class="heading">Öneri Kategorileri</h3>
+                    <ul>
+                        @Html.Action("GetOfferCategory", "Home")
+                    </ul>
+                </div>
+                <div class="block-25 mb-5">
+                    <div class="heading">Biraz Reklam</div>
+                    <ul>
+                        @Html.Action("AdsForOffer", "Home")
+                    </ul>
+                </div>
+                <div class="block-26">
+                    <h3 class="heading">En Son Öneride Bulunanlar</h3>
+                    <ul>
+                        @Html.Action("LastOfferedPeople", "Home")
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="py-5 block-22">
+    <div class="container">
+        @Html.Action("VideoAdsForOffered", "Home")
+    </div>
+</div>

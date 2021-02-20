@@ -1,0 +1,9 @@
+﻿@model IEnumerable<Complain.Entities.Entities.Picture>
+@{
+    Layout = null;
+}
+
+@foreach (var item in Model)
+{
+    <a href="~/Product/Detail/@item.Id"><img src="~/img/foto/@item.ImageUrl" style="max-height:200px;max-width:330px;min-height:200px;min-width:330px" alt="@item.Product.CompanyName" class="img-fluid"></a>
+}

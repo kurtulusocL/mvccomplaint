@@ -1,0 +1,118 @@
+﻿@model Complain.Entities.Entities.OfferCompany
+@{
+    ViewBag.Title = "Önerilen Ürün - Firma Detayı";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="site-hero site-sm-hero overlay" data-stellar-background-ratio="0.5">
+    <img src="~/img/comp.jpg" style="max-height:550px;max-width:720px;min-height:550px;min-width:720px" />
+</section>
+<div class="site-section bg-light element-animate">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-8 order-md-2 mb-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <img src="~/img/offer/@Model.Photo" style="max-height:233px;max-width:384px;min-height:233px;min-width:384px" alt="@Model.CompanyName" class="img-fluid">
+                    </div>
+                </div>
+                <hr />
+                <section class="episodes">
+                    <div class="container">
+                        <div class="row mb-5">
+                            <div class="col-md-12 pt-5">
+                                <h2><span>Firma Adı: </span>@Model.CompanyName</h2>
+                                <p><span>Öneri Konusu: </span>@Model.Subject</p>
+                                <p><span>Açıklama: </span>@Model.Description</p>
+                                <div class="price text-right"><span>Ülke: @Model.Country.Name</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-5 block-22">
+                        <div class="container">
+                            @Html.Action("VideoAdsForComplain", "Home")
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 mb-2">
+                                <h2>Öneren Bilgileri</h2>
+                            </div>
+                        </div>
+                        <div class="row bg-light align-items-center p-4 episode">
+                            <div class="col-md-10">
+                                <p class="meta">
+                                    <span>Öneren Adı-Soyadı: </span>@Model.OfferOwner.NameSurname<br />
+                                    <strong>Öneri Tarihi:</strong>@Model.CreatedTime.ToShortDateString()
+                                </p>
+                                <p class="meta"><span>Öneren Nick: </span>@Model.OfferOwner.NickName </p>
+                                <h2><a href=""><span>Yararlanılma: </span>@Model.OfferOwner.GoTime kez</a></h2>
+                                <p><span>Önerilen Firma Sayısı: </span>@Model.OfferOwner.OfferCompanies.Count()</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-5">
+                        <h3 class="mb-5"> @*@Model.Comments.Count()*@ yorum</h3>
+                        <ul class="comment-list">
+                            @Html.Action("CommentOffer", "Comment", new { id = Model.Id })
+                        </ul>
+                        <div class="comment-form-wrap pt-5">
+                            <h3 class="mb-5">Siz de bir yorum yapın</h3>
+                            @Html.Action("_OfferComment", "OfferCompany")
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-6 col-lg-4 order-md-1">
+                <div class="block-24 mb-5">
+                    <h3 class="heading">Kategoriler</h3>
+                    <ul>
+                        @Html.Action("CategoryOfferDetail", "Home")
+                    </ul>
+                </div>
+                <div class="block-24 mb-5">
+                    <h3 class="heading">Şikayetler</h3>
+                    <ul>
+                        @Html.Action("CountryOfferDetail", "Home")
+                    </ul>
+                </div>
+                <div class="block-25 mb-5">
+                    <div class="heading">Biraz Reklam</div>
+                    <ul>
+                        @Html.Action("AdsOfferDetail", "Home")
+                    </ul>
+                </div>
+                <div class="block-26">
+                    <h3 class="heading">Son Öneride Bulunanlar</h3>
+                    <ul>
+                        @Html.Action("LastOfferedPeople", "Home")
+                    </ul>
+                </div>
+                <div class="block-26">
+                    <h3 class="heading">Son Şikayette Bulunanlar</h3>
+                    <ul>
+                        @Html.Action("LastComplainPeople", "Home")
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="site-section bg-light">
+    <div class="container">
+        <div class="row justify-content-center mb-5 element-animate">
+            <div class="col-md-7 text-left section-heading">
+                <h2 class="text-primary heading">En Son Önerilenler</h2>
+                <p>En Son Önerilen Firma ya da Ürünler</p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid block-11 element-animate">
+        <div class="nonloop-block-11 owl-carousel">
+            <div class="item">
+                @Html.Action("LastOfferedThings", "Home")
+            </div>
+        </div>
+    </div>
+</div>

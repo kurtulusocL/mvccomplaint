@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Complain.Entities.Entities.Category>
+@{
+    Layout = null;
+}
+
+@foreach (var item in Model)
+{
+    <div class="col-md-6">
+        <div class="block-18 d-flex align-items-center">
+            <div class="icon mr-4">
+                <span class="icon-microphone-off"></span>
+            </div>
+            <div class="text">
+                <strong data-number="@item.OfferCompanies.Count()">@item.OfferCompanies.Count()</strong>
+                <span>@item.Name Önerisi</span>
+            </div>
+        </div>
+    </div>
+}

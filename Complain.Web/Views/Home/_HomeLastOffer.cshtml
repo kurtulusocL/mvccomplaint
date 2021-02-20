@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Complain.Entities.Entities.OfferCompany>
+@{
+    Layout = null;
+}
+
+@foreach (var item in Model)
+{
+    <div class="item">
+        <div class="block-19">
+            <figure>
+                <img src="~/img/offer/@item.Photo" style="max-height:220px;max-width:363px;min-height:220px;min-width:363px" alt="@item.CompanyName" class="img-fluid">
+            </figure>
+            <div class="text">
+                <h2 class="heading"><a href="~/OfferCompany/Detail/@item.Id">@item.CompanyName</a></h2>
+                <p class="mb-4">@item.Subject</p>
+                <div class="meta d-flex align-items-center">
+                    <div class="number">
+                        <span>@item.CreatedTime.ToShortDateString()</span>
+                    </div>
+                    <div class="price text-right"><a href="~/OfferCompany/Detail/@item.Id"><span>Detaya Bak</span></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

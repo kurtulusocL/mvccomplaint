@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Complain.Entities.Entities.Ads>
+@{
+    Layout = null;
+}
+
+@foreach (var item in Model)
+{
+    <div class="block-21 d-flex mb-4">
+        <figure class="mr-3">
+            <a href="@item.WebSite">
+                <img src="~/img/@item.Photo" style="max-width:155px;max-height:94px;min-height:94px;min-width:155px" alt="@item.CompanyName" class="img-fluid">
+            </a>
+        </figure>
+        <div class="text">
+            <h3 class="heading"><a href="@item.WebSite">@item.Title</a></h3>
+            <div class="meta">
+                <div><span class="ion-android-calendar"></span> @item.CreatedTime.ToShortDateString()</div>
+                <div><a href="@item.WebSite"><span class="ion-android-person"></span> @item.CompanyName</a></div>
+            </div>
+        </div>
+    </div>
+}

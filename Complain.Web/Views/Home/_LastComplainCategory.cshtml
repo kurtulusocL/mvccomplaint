@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Complain.Entities.Entities.Product>
+@{
+    Layout = null;
+}
+
+@foreach (var item in Model)
+{
+    <li>
+        <a href="~/Product/Detail/@item.Id" class="d-flex">
+            <figure class="image mr-3">
+                @Html.Action("LastComplainCategoryPhoto", "Home", new { id = item.Id })
+            </figure>
+            <div class="text">
+                <h3 class="heading">@item.Title</h3>
+                <span class="meta">@item.CompanyName</span>
+            </div>
+        </a>
+    </li>
+}

@@ -1,0 +1,9 @@
+﻿@model IEnumerable<Complain.Entities.Entities.Country>
+@{
+    Layout = null;
+}
+
+@foreach (var item in Model)
+{
+    <a class="dropdown-item" href="~/Country/ComplainCountry/@item.Id">@item.Name</a>
+}

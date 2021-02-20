@@ -1,0 +1,20 @@
+﻿@model IEnumerable<Complain.Entities.Entities.VideoAds>
+@{
+    Layout = null;
+}
+
+@foreach (var item in Model)
+{
+    <div class="block-20 ">
+        <figure>
+            <iframe src="@item.VideoLink" style="max-width:690px;max-height:418px;min-width:690px;min-height:418px" allowtransparency="false" allowfullscreen alt="@item.CompanyName" class="img-fluid"></iframe>
+        </figure>
+        <div class="text">
+            <h3 class="heading"><a href="@item.WebSite">@item.Title</a></h3>
+            <div class="meta">
+                <div><span class="ion-android-calendar"></span> @item.CreatedTime.ToShortDateString()</div>
+                <div><a href="@item.WebSite"><span class="ion-android-person"></span> @item.CompanyName</a></div>
+            </div>
+        </div>
+    </div>
+}

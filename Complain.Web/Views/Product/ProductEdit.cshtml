@@ -1,0 +1,117 @@
+﻿@model Complain.Entities.Entities.Product
+@{
+    ViewBag.Title = "Ürün-Firma Şikayetinizi Güncelleyin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="site-hero site-sm-hero overlay" data-stellar-background-ratio="0.5">
+    <img src="~/img/comp.jpg" style="max-height:550px;max-width:720px;min-height:550px;min-width:720px" />
+
+</section>
+<div class="site-section bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-8 order-md-2 pl-lg-5">
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 mb-5">
+                        <div class="pt-5">
+                            <div class="comment-form-wrap pt-5">
+                                <h3 class="mb-5">@ViewBag.Title</h3>
+                                <p>* ile gösterilen alanlar zorunludur ve doldurulmadan form gönderme işlemi başarılı olmaz.</p>
+                                <form action="#" method="post" enctype="multipart/form-data" class="bg-light">
+                                    @Html.AntiForgeryToken()
+                                    <hr />
+                                    <h4><label class="label label-info">Kategori ve Ülke Seçimi</label></h4>
+                                    <hr />
+                                    <div class="form-group ">
+                                        <div class="col-lg-12">
+                                            @Html.LabelFor(i => i.Category.Name, new { @class = "label-control col-md-3" })
+                                            @Html.DropDownListFor(i => i.CategoryId, new SelectList(ViewBag.Categories, "Id", "Name", new { @class = "form-control" }))
+                                            @Html.ValidationMessageFor(i => i.CategoryId, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <div class="col-lg-12">
+                                            @Html.LabelFor(i => i.Country.Name, new { @class = "label-control col-md-3" })
+                                            @Html.DropDownListFor(i => i.CountryId, new SelectList(ViewBag.Countries, "Id", "Name", new { @class = "form-control" }))
+                                            @Html.ValidationMessageFor(i => i.CountryId, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <hr />
+                                    <h4><label class="label label-info">Şikayet Bilgileri</label></h4>
+                                    <hr />
+                                    <div class="form-group">
+                                        <label for="text">Şikayet Başlığı </label>
+                                        <input type="text" name="Title" class="form-control" id="text">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="text">Firma Adı </label>
+                                        <input type="text" name="CompanyName" class="form-control" id="text">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="text">Ürün Adı *</label><br />
+                                        <input type="text" name="ProductName" class="form-control" id="text" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="text">Şikayet Konusu </label>
+                                        <input type="text" name="Subject" class="form-control" id="text">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Detail">Şikayetiniz *</label>
+                                        <textarea name="Detail" id="message" cols="30" rows="10" class="form-control" required></textarea>
+                                    </div>
+                                    <hr />
+                                    <h4><label class="label label-info">Şikayet Detay Bilgileri</label></h4>
+                                    <hr />
+                                    <div class="form-group">
+                                        <label for="text">Markası </label>
+                                        <input type="text" name="ProductDetail.Brand" class="form-control" id="text" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="text">Kullandığınız Süre </label>
+                                        <input type="text" name="ProductDetail.UsedTime" class="form-control" id="text" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="text">Ödediğiniz Fiyat </label>
+                                        <input type="text" name="ProductDetail.Price" class="form-control" id="text" required>
+                                    </div>
+                                    <hr />
+                                    <h4><label class="label label-info">Şikayet Sahibi Bilgileri</label></h4>
+                                    <hr />
+                                    <div class="form-group">
+                                        <label for="text">Adınız-Soyadınız *</label>
+                                        <input type="text" name="ComplainOwner.NameSurname" class="form-control" id="text" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Mail Adresiniz *</label>
+                                        <input type="email" name="ComplainOwner.MailAddress" class="form-control" id="email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="text">Yaşadığınız Eyalet / Bölge *</label>
+                                        <input type="text" name="ComplainOwner.Province" class="form-control" id="text" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="text">Telefon Numaranız *</label>
+                                        <input type="text" name="ComplainOwner.PhoneNumber" class="form-control" id="text" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="text">Cinsiyetiniz *</label>
+                                        <input type="text" name="ComplainOwner.Gender" class="form-control" id="text" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="date">Doğum Tarihiniz *</label>
+                                        <input type="date" name="ComplainOwner.Birthdate" class="form-control" id="date" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="submit" value="Değişiklikleri Kaydet ve Resim Ekranına İlerle" class="btn btn-primary">
+                                        <a href="~/Product/Index" class="btn btn-default">İptal Et</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
